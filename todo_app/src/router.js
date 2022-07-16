@@ -5,25 +5,24 @@ import list from './views/list.vue';
 
 const router = createRouter({
     history: createWebHistory(),
-    routes:[
+    routes: [
         {
             path: '/',
             name: 'index',
             component: add,
-            alias:'/add'
-          },
-          {
+            alias: '/add'
+        },
+        {
             path: '/add',
             name: 'add',
             component: add
-          },
-          {
+        },
+        {
             path: '/list',
             name: 'list',
             component: list
-          },
-
+        },
     ]
-  })
+})
 
 export default router
