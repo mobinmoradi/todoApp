@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "@iconify/vue": "^3.2.1",
+    "fastest-validator": "^1.12.0",
     "vue": "^3.2.25",
     "vue-flatpickr-component": "^9.0.6",
-    "vue-router": "^4.1.2"
+    "vue-router": "^4.1.2",
+    "vue-sweetalert2": "^5.0.5",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
