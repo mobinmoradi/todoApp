@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="w-10/12 h-auto bg-green-50 mx-auto mt-10 p-16 rounded-xl shadow-md">
+        <div class="w-10/12 border  h-auto bg-green-50 mx-auto mt-10 p-16 rounded-xl shadow-md">
             <form class="flex flex-col">
                 <div class="flex  justify-between">
                     <input
@@ -88,7 +88,19 @@ export default {
                     date: this.date
                 }
                 this.$store.commit('addTask', data);
-                this.$swal('Task added successfully', '', 'success');
+                this.$swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', this.$swal.stopTimer)
+                            toast.addEventListener('mouseleave', this.$swal.resumeTimer)
+                        },
+                        title: 'Task added successfully',
+                        icon: 'success',
+                    })
                 this.date = null
                 this.Priority = null
                 this.title = null
