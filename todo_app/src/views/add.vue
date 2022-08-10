@@ -85,7 +85,8 @@ export default {
                     title: this.title,
                     Priority: this.Priority,
                     cat: this.cat,
-                    date: this.date
+                    date: this.date,
+                    id:this.$store.state.leng++
                 }
                 this.$store.commit('addTask', data);
                 this.$swal.fire({
@@ -105,7 +106,6 @@ export default {
                 this.Priority = null
                 this.title = null
                 this.cat = null
-
             }
 
 

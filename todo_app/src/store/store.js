@@ -5,7 +5,13 @@ const store = createStore({
   state () {
     return {
       tasks:[],
+      leng:0
       
+    }
+  },
+  getters: {
+    taskslis (state) {
+      return state.tasks
     }
   },
   mutations: {
